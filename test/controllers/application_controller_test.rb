@@ -37,7 +37,7 @@ class WithDefaultsControllerTest < ActionController::TestCase
   test "fails" do
     with_routing do |set|
       set.draw do
-        get ':action' => 'with_defaults_dummy'
+        get ':action' => 'with_routing_dummy'
       end
 
       get :index
