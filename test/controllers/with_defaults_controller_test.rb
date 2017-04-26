@@ -2,8 +2,11 @@ require 'test_helper'
 
 class WithDefaultsControllerTest < ActionController::TestCase
   test "passes for predefined routes" do
-    get :index
-    assert_response :success
+    TracePoint.trace(:call) do |tp|
+      p tp.class
+      get :index
+      assert_response :success
+    end
   end
 
   test "fails for test routes" do
