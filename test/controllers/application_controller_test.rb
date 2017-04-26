@@ -16,7 +16,7 @@ class WithRoutingDummyController < ApplicationController
   end
 end
 
-class SimpleControllerTest < ActionController::TestCase
+class SimpleDummyControllerTest < ActionController::TestCase
   tests SimpleDummyController
 
   test "passes" do
@@ -31,7 +31,7 @@ class SimpleControllerTest < ActionController::TestCase
   end
 end
 
-class WithDefaultsControllerTest < ActionController::TestCase
+class WithRoutingDefaultsControllerTest < ActionController::TestCase
   tests WithRoutingDummyController
 
   test "fails" do
